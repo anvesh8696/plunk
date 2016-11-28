@@ -1,0 +1,179 @@
+1)
+package first;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class AmazonExample {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver","C://Users//Vinaykumar//Downloads//"
+				+ "geckodriver-v0.11.1-arm7hf//geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.amazon.com/");
+		driver.manage().window().maximize();		
+		WebElement Signin = driver.findElement(By.id("nav-link-yourAccount"));
+		Signin.click();	
+		WebElement email = driver.findElement(By.className("auth-autofocus"));
+		email.sendKeys("vinaycse.1988@gmail.com");
+		WebElement password = driver.findElement(By.cssSelector("#ap_password"));
+		password.sendKeys("Vinayvinay01");
+		WebElement Signin1 = driver.findElement(By.id("signInSubmit"));
+		Signin1.click();
+		WebElement searchBar = driver.findElement(By.cssSelector("#twotabsearchtextbox"));
+		searchBar.sendKeys("barbie dolls");
+		WebElement searchbutton = driver.findElement(By.xpath("//input[@type='submit']"));		
+		searchbutton.click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement searchbarbie = driver.findElement(By.xpath("//*[contains(text(),'Barbie "
+				+ "Fashionistas Doll 18 Va-Va-Violet - Original')]"));
+		searchbarbie.click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//input[@id='add-to-cart-button']")).click();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebElement Cart = driver.findElement(By.id("hlb-view-cart-announce"));
+		Cart.click();
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+		driver.close();
+	
+	}		
+}
+	
+
+		
+
+
+2)
+
+
+
+package first;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class AmazonExample1 {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver","C://Users//Vinaykumar//Downloads//geckodriver-v0.11.1-arm7hf//geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.amazon.com/");
+		driver.manage().window().maximize();		
+		WebElement searchBar = driver.findElement(By.cssSelector("#twotabsearchtextbox"));
+		searchBar.sendKeys("chocolates");
+		WebElement searchbutton = driver.findElement(By.xpath("//input[@type='submit']"));		
+		searchbutton.click();
+		WebElement searchchocolates = driver.findElement(By.xpath("//*[contains(text(),'Ferrero Rocher Hazelnut Chocolates, 48 Count')]"));
+		searchchocolates.click();
+		WebElement SeeAllBuyingOptions = driver.findElement(By.id("buybox-see-all-buying-choices-announce"));
+		SeeAllBuyingOptions.click();
+	}
+
+}
+
+
+
+3)
+
+
+
+package first;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class LinkedInExample {
+
+	public static void main(String[] args) {
+		WebDriver driver = new FirefoxDriver();
+        driver.get("https://www.linkedin.com/");
+		driver.manage().window().maximize();
+		WebElement firstName = driver.findElement(By.xpath("//input[@name='firstName']"));
+		firstName.sendKeys("First Name");
+		WebElement lastName = driver.findElement(By.xpath("//input[@name='lastName']"));
+		lastName.sendKeys("Last Name");
+		WebElement email = driver.findElement(By.cssSelector(".reg-email"));
+		email.sendKeys("test@gmail.com");
+		WebElement password = driver.findElement(By.id("reg-password"));
+ 		password.sendKeys("test123");
+		
+		}
+	}
+
+
+
+
+
+4)
+
+
+
+package first;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class FirstSeleniumTest {
+
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver","C://Users//Vinaykumar//Downloads//geckodriver-v0.11.1-arm7hf//geckodriver.exe");
+		//System.setProperty("webdriver.chrome.driver","C://Users//Vinaykumar//Downloads//chromedriver.exe");
+		//WebDriver driver = new ChromeDriver();
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.Amazon.com/");
+		driver.manage().window().maximize();
+		WebElement searchBar = driver.findElement(By.id("twotabsearchtextbox"));
+		searchBar.sendKeys("paper");
+		WebElement searchbutton = driver.findElement(By.xpath("//input[@type='submit']"));		
+		searchbutton.click();
+		//driver.close();
+
+	}
+	
+
+}
+   package first;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class FirstSeleniumTest {
+
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver","C://Users//Vinaykumar//Downloads//geckodriver-v0.11.1-arm7hf//geckodriver.exe");
+		//System.setProperty("webdriver.chrome.driver","C://Users//Vinaykumar//Downloads//chromedriver.exe");
+		//WebDriver driver = new ChromeDriver();
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.Amazon.com/");
+		driver.manage().window().maximize();
+		WebElement searchBar = driver.findElement(By.id("twotabsearchtextbox"));
+		searchBar.sendKeys("paper");
+		WebElement searchbutton = driver.findElement(By.xpath("//input[@type='submit']"));		
+		searchbutton.click();
+		//driver.close();
+
+	}
+	
+
+}
+   
