@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 new changes in this file i want new changes
+=======
+new changes in this file change
+>>>>>>> 77d14a2e02f2861907d440699045cbf05cb061e5
